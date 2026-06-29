@@ -1,78 +1,52 @@
+function parseFilename(filename) {
+  const base = filename.replace(/\.[^.]+$/, '')
+  const priceMatch = base.match(/\(Rs\s*(\d+)(?:\s+each)?\)/i)
+  const priceValue = priceMatch ? Number(priceMatch[1]) : 550
+  const name = base
+    .replace(/\(Rs\s*\d+(?:\s+each)?\)/gi, '')
+    .replace(/\s*\(\d+\)\s*$/, '')
+    .trim()
+
+  let category = 'Accessories'
+  const lower = name.toLowerCase()
+  if (lower.includes('keychain') || lower.includes('shroomies')) category = 'Keychains'
+  else if (lower.includes('bouquet')) category = 'Bouquets'
+  else if (lower.includes('plush') || lower.includes('penguin')) category = 'Plushies'
+
+  const formatPrice = (n) => `Rs. ${n.toLocaleString('en-PK')}`
+
+  return {
+    name,
+    category,
+    price: formatPrice(priceValue),
+    priceValue,
+    image: `/products/${filename}`,
+    description: '✿ handmade with love — made to order just for you',
+  }
+}
+
+const productFiles = [
+  'blush-tulip-trio-bouquet-rs-2000-1.jpg',
+  'chick-with-flower-keychain-rs-1500.jpg',
+  'cotton-candy-tulip-bouquet-rs-3000.jpg',
+  'kuromi-plush-rs-2500.png',
+  'mauve-tulip-bouquet-rs-1500.jpg',
+  'mini-rose-bouquet-keychain-rs-1500.jpg',
+  'pika-the-penguin-plush-rs-1500.jpg',
+  'poko-pika-penguin-duo-rs-3000.jpg',
+  'poko-the-penguin-plush-rs-1500.jpg',
+  'shroomies-pic-2.png',
+  'shroomies-pic-3.png',
+  'shroomies-rs-550-each.jpg',
+]
+
 export const shopItems = [
+  ...productFiles.map((file, index) => ({
+    id: index + 1,
+    ...parseFilename(file),
+  })),
   {
-    id: 1,
-    name: 'Blue & Pink Penguin Duo',
-    category: 'Plushies',
-    price: 'Rs. 900',
-    priceValue: 900,
-    image: '/products/penguin-duo.jpeg',
-    description: 'Handmade amigurumi penguin pair — soft, cute & gift-ready',
-  },
-  {
-    id: 2,
-    name: 'Pastel Tulip & Lavender Bouquet',
-    category: 'Bouquets',
-    price: 'Rs. 2,200',
-    priceValue: 2200,
-    image: '/products/pastel-tulip-bouquet.jpeg',
-    description: 'Everlasting crochet tulips wrapped in blush pink — our signature bouquet',
-  },
-  {
-    id: 3,
-    name: 'Kuromi Amigurumi Plush',
-    category: 'Plushies',
-    price: 'Rs. 1,800',
-    priceValue: 1800,
-    image: '/products/kuromi-plush.jpeg',
-    description: 'Hand-crocheted Kuromi plush with signature jester hat & skull detail',
-  },
-  {
-    id: 4,
-    name: 'Crochet Character Keychain',
-    category: 'Keychains',
-    price: 'Rs. 650',
-    priceValue: 650,
-    image: '/products/character-keychain.jpeg',
-    description: 'Pick your fave character hat — frog, bunny, mushroom & more',
-  },
-  {
-    id: 5,
-    name: 'Hello Kitty Bag Charm',
-    category: 'Keychains',
-    price: 'Rs. 600',
-    priceValue: 600,
-    image: '/products/hello-kitty-keychain.jpeg',
-    description: 'Crochet Hello Kitty head keychain — perfect for your everyday bag',
-  },
-  {
-    id: 6,
-    name: 'Chick Keychain with Flower',
-    category: 'Keychains',
-    price: 'Rs. 750',
-    priceValue: 750,
-    image: '/products/chick-keychain.jpeg',
-    description: 'Yellow amigurumi chick with red bow & tiny crochet flower',
-  },
-  {
-    id: 7,
-    name: 'Blush Tulip Trio Bouquet',
-    category: 'Bouquets',
-    price: 'Rs. 1,400',
-    priceValue: 1400,
-    image: '/products/blush-tulip-bouquet.jpeg',
-    description: 'Three pink crochet tulips with satin ribbon — a sweet forever gift',
-  },
-  {
-    id: 8,
-    name: 'Mini Rose Bouquet Keychain',
-    category: 'Keychains',
-    price: 'Rs. 550',
-    priceValue: 550,
-    image: '/products/rose-bouquet-keychain.jpeg',
-    description: 'Tiny crochet rose bouquet charm — red roses in a pink wrap',
-  },
-  {
-    id: 9,
+    id: productFiles.length + 1,
     name: 'Custom Order',
     category: 'Custom',
     price: 'Price on request',

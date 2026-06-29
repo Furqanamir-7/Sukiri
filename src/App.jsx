@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import WhatsAppFAB from './components/WhatsAppFAB'
 import PageTransition from './components/PageTransition'
 import { WhatsAppProvider } from './components/WhatsAppPopup'
 import Home from './pages/Home'
@@ -25,6 +26,14 @@ function AnimatedRoutes() {
           }
         />
         <Route
+          path="/about"
+          element={
+            <PageTransition>
+              <About />
+            </PageTransition>
+          }
+        />
+        <Route
           path="/portfolio"
           element={
             <PageTransition>
@@ -37,14 +46,6 @@ function AnimatedRoutes() {
           element={
             <PageTransition>
               <Shop />
-            </PageTransition>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <PageTransition>
-              <About />
             </PageTransition>
           }
         />
@@ -70,6 +71,7 @@ export default function App() {
           <AnimatedRoutes />
         </main>
         <Footer />
+        <WhatsAppFAB />
       </div>
     </WhatsAppProvider>
   )

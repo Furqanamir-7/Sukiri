@@ -26,14 +26,14 @@ export default function Footer() {
             <Link to="/" className="hover:text-cream">
               Home
             </Link>
+            <Link to="/about" className="hover:text-cream">
+              About
+            </Link>
             <Link to="/portfolio" className="hover:text-cream">
               Portfolio
             </Link>
             <Link to="/shop" className="hover:text-cream">
               Shop
-            </Link>
-            <Link to="/about" className="hover:text-cream">
-              About
             </Link>
             <Link to="/faq" className="hover:text-cream">
               FAQ

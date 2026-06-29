@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ScallopedCard from '../components/ScallopedCard'
 import WhatsAppButton from '../components/WhatsAppButton'
-import ProductImage from '../components/ProductImage'
+import ProductMedia from '../components/ProductMedia'
 import { portfolioItems, portfolioCategories } from '../data/portfolioItems'
 
 export default function Portfolio() {
@@ -55,12 +55,8 @@ export default function Portfolio() {
           >
             <ScallopedCard className="group cursor-pointer p-0">
               <div className="relative flex items-center justify-center rounded-t-xl bg-navy-deep/40 p-3">
-                <ProductImage
-                  src={item.image}
-                  alt={item.name}
-                  className="transition duration-300 group-hover:scale-[1.02]"
-                />
-                <div className="absolute inset-0 flex items-center justify-center rounded-t-xl bg-navy-deep/60 opacity-0 transition group-hover:opacity-100">
+                <ProductMedia item={item} />
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center rounded-t-xl bg-navy-deep/60 opacity-0 transition group-hover:opacity-100">
                   <span className="font-accent text-2xl text-cream">✿ view</span>
                 </div>
               </div>

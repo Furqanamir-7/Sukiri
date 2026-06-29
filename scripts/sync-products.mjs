@@ -40,6 +40,7 @@ function parseProduct(sourceFile) {
       name: 'Shroomies',
       priceValue: 550,
       category: 'Keychains',
+      group: 'shroomies',
     },
     'whatsapp image 2026-06-29 at 9.17.23 pm': {
       name: 'Blush Tulip Trio Bouquet',
@@ -54,6 +55,11 @@ function parseProduct(sourceFile) {
     priceValue = override.priceValue
   }
 
+  const group =
+    lower.includes('shroomies') || name.toLowerCase().startsWith('shroomies')
+      ? 'shroomies'
+      : override?.group ?? null
+
   let category = override?.category ?? 'Accessories'
   if (!override) {
     if (lower.includes('keychain') || lower.includes('shroomies')) category = 'Keychains'
@@ -63,7 +69,14 @@ function parseProduct(sourceFile) {
 
   const destFile = `${toSlug(sourceFile)}${ext}`
 
-  return { name, category, priceValue, destFile, sourceFile }
+  return { name, category, priceValue, destFile, sourceFile, group }
+}
+
+function shroomiesImageOrder(sourceFile) {
+  const lower = sourceFile.toLowerCase()
+  if (lower.includes('pic 2')) return 2
+  if (lower.includes('pic 3')) return 3
+  return 1
 }
 
 function formatPrice(n) {
@@ -89,19 +102,53 @@ for (const file of existing) {
   }
 }
 
-const products = sources.map((sourceFile, index) => {
+const parsedList = sources.map((sourceFile) => {
   const parsed = parseProduct(sourceFile)
   fs.copyFileSync(path.join(SOURCE, sourceFile), path.join(DEST, parsed.destFile))
+  return parsed
+})
 
-  return {
-    id: index + 1,
-    name: parsed.name,
-    category: parsed.category,
-    price: parsed.priceValue ? formatPrice(parsed.priceValue) : 'Price on request',
-    priceValue: parsed.priceValue,
-    image: `/products/${parsed.destFile}`,
-    description: '✿ handmade with love — made to order just for you',
+const shroomiesEntries = []
+const regularProducts = []
+
+for (const parsed of parsedList) {
+  if (parsed.group === 'shroomies') {
+    shroomiesEntries.push(parsed)
+  } else {
+    regularProducts.push(parsed)
   }
+}
+
+const products = regularProducts.map((parsed, index) => ({
+  id: index + 1,
+  name: parsed.name,
+  category: parsed.category,
+  price: parsed.priceValue ? formatPrice(parsed.priceValue) : 'Price on request',
+  priceValue: parsed.priceValue,
+  image: `/products/${parsed.destFile}`,
+  description: '✿ handmade with love — made to order just for you',
+}))
+
+if (shroomiesEntries.length) {
+  shroomiesEntries.sort(
+    (a, b) => shroomiesImageOrder(a.sourceFile) - shroomiesImageOrder(b.sourceFile),
+  )
+  const images = shroomiesEntries.map((p) => `/products/${p.destFile}`)
+  products.push({
+    id: products.length + 1,
+    name: 'Shroomies',
+    category: 'Keychains',
+    price: formatPrice(550),
+    priceValue: 550,
+    image: images[0],
+    images,
+    description: '✿ pick your fave shroomie hat — swipe to browse all styles',
+  })
+}
+
+// Re-assign sequential ids
+products.forEach((p, i) => {
+  p.id = i + 1
 })
 
 const customId = products.length + 1

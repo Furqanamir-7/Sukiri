@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ScallopedCard from '../components/ScallopedCard'
 import WhatsAppButton from '../components/WhatsAppButton'
-import ProductImage from '../components/ProductImage'
+import ProductMedia from '../components/ProductMedia'
 import { shopItems, categories } from '../data/shopItems'
 
 export default function Shop() {
@@ -57,7 +57,7 @@ export default function Shop() {
           >
             <ScallopedCard>
               <div className="mb-4 flex min-h-[240px] items-center justify-center rounded-xl bg-navy-deep/40 p-3">
-                <ProductImage src={item.image} alt={item.name} />
+                <ProductMedia item={item} />
               </div>
               <h3 className="text-lg font-semibold text-cream">{item.name}</h3>
               <p className="mt-1 font-medium text-steel">{item.price}</p>

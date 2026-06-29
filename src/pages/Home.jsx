@@ -4,7 +4,7 @@ import FlowerField from '../components/FlowerField'
 import Marquee from '../components/Marquee'
 import ScallopedCard from '../components/ScallopedCard'
 import WhatsAppButton from '../components/WhatsAppButton'
-import ProductImage from '../components/ProductImage'
+import ProductMedia from '../components/ProductMedia'
 import { shopItems } from '../data/shopItems'
 
 const featured = shopItems.filter((item) => item.category !== 'Custom').slice(0, 3)
@@ -110,7 +110,7 @@ export default function Home() {
             >
               <ScallopedCard>
                 <div className="mb-4 flex min-h-[220px] items-center justify-center rounded-xl bg-navy-deep/40 p-3">
-                  <ProductImage src={item.image} alt={item.name} />
+                  <ProductMedia item={item} />
                 </div>
                 <h3 className="font-semibold text-cream">{item.name}</h3>
                 <p className="mt-1 text-sm text-steel">{item.price}</p>

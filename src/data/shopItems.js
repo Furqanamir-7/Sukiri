@@ -66,24 +66,6 @@ export const shopItems = [
   },
   {
     "id": 8,
-    "name": "Shroomies (pic 2)",
-    "category": "Keychains",
-    "price": "Rs. 550",
-    "priceValue": 550,
-    "image": "/products/shroomies-pic-2.png",
-    "description": "✿ handmade with love — made to order just for you"
-  },
-  {
-    "id": 9,
-    "name": "Shroomies (pic 3)",
-    "category": "Keychains",
-    "price": "Rs. 550",
-    "priceValue": 550,
-    "image": "/products/shroomies-pic-3.png",
-    "description": "✿ handmade with love — made to order just for you"
-  },
-  {
-    "id": 10,
     "name": "Cotton Candy Tulip Bouquet",
     "category": "Bouquets",
     "price": "Rs. 3,000",
@@ -92,16 +74,7 @@ export const shopItems = [
     "description": "✿ handmade with love — made to order just for you"
   },
   {
-    "id": 11,
-    "name": "Shroomies",
-    "category": "Keychains",
-    "price": "Rs. 550",
-    "priceValue": 550,
-    "image": "/products/whatsapp-image-2026-06-29-at-9-17-20-pm.jpeg",
-    "description": "✿ handmade with love — made to order just for you"
-  },
-  {
-    "id": 12,
+    "id": 9,
     "name": "Blush Tulip Trio Bouquet",
     "category": "Bouquets",
     "price": "Rs. 2,000",
@@ -110,7 +83,21 @@ export const shopItems = [
     "description": "✿ handmade with love — made to order just for you"
   },
   {
-    "id": 13,
+    "id": 10,
+    "name": "Shroomies",
+    "category": "Keychains",
+    "price": "Rs. 550",
+    "priceValue": 550,
+    "image": "/products/whatsapp-image-2026-06-29-at-9-17-20-pm.jpeg",
+    "images": [
+      "/products/whatsapp-image-2026-06-29-at-9-17-20-pm.jpeg",
+      "/products/shroomies-pic-2.png",
+      "/products/shroomies-pic-3.png"
+    ],
+    "description": "✿ pick your fave shroomie hat — swipe to browse all styles"
+  },
+  {
+    "id": 11,
     "name": "Custom Order",
     "category": "Custom",
     "price": "Price on request",

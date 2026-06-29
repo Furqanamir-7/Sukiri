@@ -21,7 +21,7 @@ const fadeUp = {
 export default function Home() {
   return (
     <div>
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-navy px-4">
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-pink-hero px-4">
         <FlowerField />
 
         <div className="relative z-10 mx-auto max-w-3xl text-center">

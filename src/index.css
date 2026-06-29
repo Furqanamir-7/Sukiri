@@ -1,10 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-navy: #3d5a80;
-  --color-navy-deep: #2b3f5c;
-  --color-cream: #f5f0e8;
-  --color-steel: #7b9ec4;
+  --color-blush: #fff0f5;
+  --color-blush-deep: #ffe4ef;
+  --color-navy: #f0a4c4;
+  --color-navy-deep: #d4367a;
+  --color-cream: #ffffff;
+  --color-steel: #ffc4db;
+  --color-magenta: #c2185b;
   --font-display: 'Pacifico', cursive;
   --font-accent: 'Dancing Script', cursive;
   --font-body: 'DM Sans', sans-serif;
@@ -16,9 +19,10 @@
   }
 
   body {
-    @apply bg-navy text-cream font-body antialiased;
+    @apply bg-blush text-navy-deep font-body antialiased;
     margin: 0;
     min-height: 100vh;
+    background-image: linear-gradient(180deg, #fff5f8 0%, #ffe8f0 50%, #fff0f5 100%);
   }
 
   #root {
@@ -38,6 +42,14 @@
   .font-body {
     font-family: var(--font-body);
   }
+
+  .bg-pink-hero {
+    background: linear-gradient(145deg, #f8b4d0 0%, #f48fb8 45%, #e85a9a 100%);
+  }
+
+  .bg-pink-panel {
+    background: linear-gradient(160deg, #f4a8c8 0%, #e879a8 100%);
+  }
 }
 
 @keyframes marquee {
@@ -52,10 +64,10 @@
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(245, 240, 232, 0.35);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.45);
   }
   50% {
-    box-shadow: 0 0 20px 4px rgba(245, 240, 232, 0.25);
+    box-shadow: 0 0 22px 6px rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -85,7 +97,7 @@
   content: '';
   position: absolute;
   inset: -6px;
-  background-image: radial-gradient(circle at 8px 0, transparent 6px, #2b3f5c 6px);
+  background-image: radial-gradient(circle at 8px 0, transparent 6px, #d4367a 6px);
   background-size: 16px 8px;
   background-repeat: repeat-x;
   background-position: top center;
@@ -99,7 +111,7 @@
   bottom: -6px;
   left: 0;
   right: 0;
-  background-image: radial-gradient(circle at 8px 8px, transparent 6px, #2b3f5c 6px);
+  background-image: radial-gradient(circle at 8px 8px, transparent 6px, #d4367a 6px);
   background-size: 16px 16px;
   background-repeat: repeat-x;
   background-position: bottom center;

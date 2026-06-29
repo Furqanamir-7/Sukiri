@@ -76,7 +76,7 @@ export default function Portfolio() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="scalloped-border mt-16 rounded-2xl bg-navy p-8 text-center md:p-12"
+        className="scalloped-border mt-16 rounded-2xl bg-pink-panel p-8 text-center md:p-12"
       >
         <h2 className="font-display text-2xl text-cream md:text-3xl">
           want something just like this?

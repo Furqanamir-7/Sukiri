@@ -61,7 +61,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-navy px-4 py-16">
+      <section className="bg-pink-panel px-4 py-16">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-10 text-center font-display text-3xl text-cream">
             the process ✿

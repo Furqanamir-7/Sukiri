@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-navy-deep/50 bg-navy/95 backdrop-blur-md">
+      <nav className="sticky top-0 z-50 border-b border-white/20 bg-navy-deep/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
           <Link to="/" onClick={() => setOpen(false)}>
             <Logo size="md" />

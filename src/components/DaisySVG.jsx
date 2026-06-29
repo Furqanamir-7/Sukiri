@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
 const colors = {
-  dark: '#2B3F5C',
-  light: '#F5F0E8',
+  dark: 'rgba(255, 255, 255, 0.5)',
+  light: 'rgba(255, 255, 255, 0.92)',
 }
 
 export default function DaisySVG({
@@ -13,6 +13,7 @@ export default function DaisySVG({
   animate = true,
 }) {
   const fill = colors[color] || color
+  const centerFill = color === 'light' ? '#FFD4E8' : '#FFFFFF'
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -49,13 +50,13 @@ export default function DaisySVG({
           rx="7"
           ry="10"
           fill={fill}
-          opacity="0.9"
           transform={`rotate(${angle} 24 24)`}
         />
       ))}
       <path
         d="M24 22c-1.5 0-2.7 1.2-2.7 2.7 0 2 2.7 4.8 2.7 4.8s2.7-2.8 2.7-4.8c0-1.5-1.2-2.7-2.7-2.7z"
-        fill={color === 'light' ? '#2B3F5C' : '#F5F0E8'}
+        fill={centerFill}
+        opacity="0.95"
       />
     </Component>
   )

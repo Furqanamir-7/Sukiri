@@ -30,7 +30,7 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mb-2 text-sm uppercase tracking-widest text-cream/70"
+            className="mb-2 text-sm uppercase tracking-widest text-rose-light/70"
           >
             welcome to
           </motion.p>
@@ -40,7 +40,7 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="font-display text-6xl text-cream drop-shadow-md md:text-8xl"
+            className="font-display text-6xl text-rose-light drop-shadow-md md:text-8xl"
           >
             sukiri
           </motion.h1>
@@ -50,7 +50,7 @@ export default function Home() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mt-2 font-accent text-2xl text-cream md:text-3xl"
+            className="mt-2 font-accent text-2xl text-rose-light md:text-3xl"
           >
             your lucky loop
           </motion.p>
@@ -62,7 +62,7 @@ export default function Home() {
             variants={fadeUp}
             className="mt-6 inline-block"
           >
-            <span className="animate-pulse-glow inline-block rounded-full border-2 border-cream px-6 py-2 text-sm font-bold uppercase tracking-wider text-white">
+            <span className="animate-pulse-glow inline-block rounded-full border-2 border-rose-light px-6 py-2 text-sm font-bold uppercase tracking-wider text-rose-light">
               orders are OPEN ✦
             </span>
           </motion.div>
@@ -112,12 +112,12 @@ export default function Home() {
                 <div className="mb-4 flex min-h-[220px] items-center justify-center rounded-xl bg-navy-deep/40 p-3">
                   <ProductMedia item={item} />
                 </div>
-                <h3 className="font-semibold text-cream">{item.name}</h3>
-                <p className="mt-1 text-sm text-cream/90">{item.price}</p>
-                <p className="mt-2 text-xs text-cream/75">✿ {item.description}</p>
+                <h3 className="font-semibold text-rose-light">{item.name}</h3>
+                <p className="mt-1 text-sm text-rose-light/90">{item.price}</p>
+                <p className="mt-2 text-xs text-rose-light/75">✿ {item.description}</p>
                 <Link
                   to="/shop"
-                  className="mt-4 inline-block text-sm text-cream/90 hover:text-cream"
+                  className="mt-4 inline-block text-sm text-rose-light/90 hover:text-rose-light"
                 >
                   view in shop →
                 </Link>
@@ -133,7 +133,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="font-accent text-3xl text-cream md:text-4xl"
+            className="font-accent text-3xl text-rose-light md:text-4xl"
           >
             "every stitch is made with intention"
           </motion.p>
@@ -142,14 +142,14 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-4 text-cream/70"
+            className="mt-4 text-rose-light/70"
           >
             slow fashion crochet — limited drops, made to order, crafted with love
             for the gen z soul who wants something unique.
           </motion.p>
           <Link
             to="/about"
-            className="mt-6 inline-block rounded-full border border-cream/30 px-6 py-2 text-sm text-cream transition hover:bg-cream/10"
+            className="mt-6 inline-block rounded-full border border-rose-light/30 px-6 py-2 text-sm text-rose-light transition hover:bg-rose-pale/20"
           >
             our story →
           </Link>

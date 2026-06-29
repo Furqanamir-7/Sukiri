@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 
 const colors = {
-  dark: 'rgba(255, 255, 255, 0.5)',
-  light: 'rgba(255, 255, 255, 0.92)',
+  dark: 'rgba(255, 220, 233, 0.55)',
+  light: 'rgba(255, 220, 233, 0.92)',
 }
 
 export default function DaisySVG({
@@ -13,7 +13,7 @@ export default function DaisySVG({
   animate = true,
 }) {
   const fill = colors[color] || color
-  const centerFill = color === 'light' ? '#FFD4E8' : '#FFFFFF'
+  const centerFill = color === 'light' ? '#F5B8D0' : '#FFDCE9'
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches

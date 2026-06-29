@@ -99,8 +99,8 @@ export default function FAQ() {
         viewport={{ once: true }}
         className="mt-12 rounded-2xl bg-navy-deep p-8 text-center"
       >
-        <h2 className="font-display text-xl text-cream">still confused?</h2>
-        <p className="mt-2 text-sm text-cream/70">
+        <h2 className="font-display text-xl text-rose-light">still confused?</h2>
+        <p className="mt-2 text-sm text-rose-light/70">
           no worries — just DM us directly
         </p>
         <div className="mt-4">

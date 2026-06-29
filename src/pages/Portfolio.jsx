@@ -36,7 +36,7 @@ export default function Portfolio() {
             className={`rounded-full px-4 py-2 text-sm font-medium transition ${
               filter === cat
                 ? 'bg-cream text-ink'
-                : 'bg-navy-deep text-cream/90 hover:bg-navy-deep/80'
+                : 'bg-navy-deep text-rose-light/90 hover:bg-navy-deep/80'
             }`}
           >
             {cat}
@@ -57,13 +57,13 @@ export default function Portfolio() {
               <div className="relative flex items-center justify-center rounded-t-xl bg-navy-deep/40 p-3">
                 <ProductMedia item={item} />
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center rounded-t-xl bg-navy-deep/60 opacity-0 transition group-hover:opacity-100">
-                  <span className="font-accent text-2xl text-cream">✿ view</span>
+                  <span className="font-accent text-2xl text-rose-light">✿ view</span>
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="font-semibold text-cream">{item.name}</h3>
-                <p className="mt-1 text-sm text-cream/90">{item.price}</p>
-                <span className="mt-2 inline-block rounded-full bg-navy-deep/80 px-3 py-0.5 text-xs text-cream/90">
+                <h3 className="font-semibold text-rose-light">{item.name}</h3>
+                <p className="mt-1 text-sm text-rose-light/90">{item.price}</p>
+                <span className="mt-2 inline-block rounded-full bg-navy-deep/80 px-3 py-0.5 text-xs text-rose-light/90">
                   {item.category}
                 </span>
               </div>
@@ -78,10 +78,10 @@ export default function Portfolio() {
         viewport={{ once: true }}
         className="scalloped-border mt-16 rounded-2xl bg-pink-panel p-8 text-center md:p-12"
       >
-        <h2 className="font-display text-2xl text-cream md:text-3xl">
+        <h2 className="font-display text-2xl text-rose-light md:text-3xl">
           want something just like this?
         </h2>
-        <p className="mt-2 text-cream/70">DM us and we'll make it happen ✿</p>
+        <p className="mt-2 text-rose-light/70">DM us and we'll make it happen ✿</p>
         <div className="mt-6">
           <WhatsAppButton className="px-8 py-3">Order Now</WhatsAppButton>
         </div>

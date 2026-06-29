@@ -5,10 +5,10 @@ export default function Marquee() {
   return (
     <div className="overflow-hidden bg-navy-deep py-3">
       <div className="animate-marquee flex whitespace-nowrap">
-        <span className="px-4 text-xs font-semibold uppercase tracking-[0.25em] text-cream">
+        <span className="px-4 text-xs font-semibold uppercase tracking-[0.25em] text-rose-light">
           {text}
         </span>
-        <span className="px-4 text-xs font-semibold uppercase tracking-[0.25em] text-cream">
+        <span className="px-4 text-xs font-semibold uppercase tracking-[0.25em] text-rose-light">
           {text}
         </span>
       </div>

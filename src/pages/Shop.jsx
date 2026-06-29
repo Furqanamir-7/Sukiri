@@ -39,7 +39,7 @@ export default function Shop() {
             className={`rounded-full px-4 py-2 text-sm font-medium transition ${
               filter === cat
                 ? 'bg-cream text-ink'
-                : 'bg-navy-deep text-cream/90 hover:bg-navy-deep/80'
+                : 'bg-navy-deep text-rose-light/90 hover:bg-navy-deep/80'
             }`}
           >
             {cat}
@@ -59,12 +59,12 @@ export default function Shop() {
               <div className="mb-4 flex min-h-[240px] items-center justify-center rounded-xl bg-navy-deep/40 p-3">
                 <ProductMedia item={item} />
               </div>
-              <h3 className="text-lg font-semibold text-cream">{item.name}</h3>
-              <p className="mt-1 font-medium text-cream/95">{item.price}</p>
-              <p className="mt-2 text-sm text-cream/80">
+              <h3 className="text-lg font-semibold text-rose-light">{item.name}</h3>
+              <p className="mt-1 font-medium text-rose-light/95">{item.price}</p>
+              <p className="mt-2 text-sm text-rose-light/80">
                 ✿ handmade with love
               </p>
-              <p className="mt-1 text-xs text-cream/70">{item.description}</p>
+              <p className="mt-1 text-xs text-rose-light/70">{item.description}</p>
               <div className="mt-4">
                 <WhatsAppButton itemName={item.name} className="w-full">
                   Order on WhatsApp ↗

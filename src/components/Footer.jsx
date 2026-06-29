@@ -19,23 +19,23 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           <div className="text-center md:text-left">
             <Logo size="sm" />
-            <p className="mt-1 font-accent text-lg text-cream/80">your lucky loop</p>
+            <p className="mt-1 font-accent text-lg text-rose-light/80">your lucky loop</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-cream/70">
-            <Link to="/" className="hover:text-cream">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-rose-light/70">
+            <Link to="/" className="hover:text-rose-light">
               Home
             </Link>
-            <Link to="/about" className="hover:text-cream">
+            <Link to="/about" className="hover:text-rose-light">
               About
             </Link>
-            <Link to="/portfolio" className="hover:text-cream">
+            <Link to="/portfolio" className="hover:text-rose-light">
               Portfolio
             </Link>
-            <Link to="/shop" className="hover:text-cream">
+            <Link to="/shop" className="hover:text-rose-light">
               Shop
             </Link>
-            <Link to="/faq" className="hover:text-cream">
+            <Link to="/faq" className="hover:text-rose-light">
               FAQ
             </Link>
           </div>
@@ -45,7 +45,7 @@ export default function Footer() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 text-cream transition hover:bg-cream/20"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-rose-light/15 text-rose-light transition hover:bg-rose-light/25"
               aria-label="Instagram"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
@@ -54,7 +54,7 @@ export default function Footer() {
             </a>
             <button
               onClick={() => openWhatsApp()}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 text-cream transition hover:bg-cream/20"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-rose-light/15 text-rose-light transition hover:bg-rose-light/25"
               aria-label="WhatsApp"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-xs text-cream/40">
+        <p className="mt-8 text-center text-xs text-rose-light/40">
           handmade with ✿ in pakistan · © {new Date().getFullYear()} sukiri
         </p>
       </div>

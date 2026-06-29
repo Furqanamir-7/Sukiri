@@ -11,7 +11,7 @@ export default function WhatsAppButton({
   const variants = {
     cream: 'bg-cream text-ink hover:bg-blush-deep',
     green: 'bg-[#25D366] text-white hover:bg-[#20bd5a]',
-    outline: 'border-2 border-cream text-cream hover:bg-cream/10',
+    outline: 'border-2 border-rose-light text-rose-light hover:bg-rose-light/15',
   }
 
   return (

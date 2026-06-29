@@ -23,26 +23,26 @@ export default function About() {
         <motion.p
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="font-accent text-3xl text-cream md:text-5xl"
+          className="font-accent text-3xl text-rose-light md:text-5xl"
         >
           "every stitch is made with intention ✿"
         </motion.p>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
-        <div className="grid items-center gap-12 md:grid-cols-2">
+      <section className="bg-blush-deep px-4 py-16 md:px-6">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-3xl text-cream">our story</h2>
-            <p className="mt-4 leading-relaxed text-cream/90">
+            <h2 className="font-display text-3xl text-ink">our story</h2>
+            <p className="mt-4 leading-relaxed text-ink/90">
               sukiri started as a late-night crochet obsession — loops of yarn,
               playlists on repeat, and the dream of making pieces that feel lucky
               to wear. "your lucky loop" isn't just a tagline — it's the vibe.
             </p>
-            <p className="mt-4 leading-relaxed text-cream/90">
+            <p className="mt-4 leading-relaxed text-ink/90">
               we&apos;re a gen z brand that believes in slow fashion, limited drops,
               and pieces made to order just for you. no mass production, no
               corporate energy — just handmade crochet with heart-shaped details
@@ -63,7 +63,7 @@ export default function About() {
 
       <section className="bg-pink-panel px-4 py-16">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-10 text-center font-display text-3xl text-cream">
+          <h2 className="mb-10 text-center font-display text-3xl text-rose-light">
             the process ✿
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
@@ -77,16 +77,16 @@ export default function About() {
                 className="text-center"
               >
                 <span className="text-4xl">{step.emoji}</span>
-                <h3 className="mt-3 font-semibold text-cream">{step.title}</h3>
-                <p className="mt-2 text-sm text-cream/60">{step.desc}</p>
+                <h3 className="mt-3 font-semibold text-rose-light">{step.title}</h3>
+                <p className="mt-2 text-sm text-rose-light/85">{step.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-16 md:px-6">
-        <div className="flex flex-wrap justify-center gap-3">
+      <section className="bg-cream px-4 py-16 md:px-6">
+        <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-3">
           {values.map((val, i) => (
             <motion.span
               key={val}
@@ -94,7 +94,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="rounded-full border border-steel/40 px-5 py-2 text-sm text-cream"
+              className="rounded-full border border-magenta/25 bg-blush-deep/60 px-5 py-2 text-sm text-ink"
             >
               {val}
             </motion.span>
@@ -103,8 +103,8 @@ export default function About() {
       </section>
 
       <section className="bg-navy-deep px-4 py-16 text-center">
-        <h2 className="font-display text-2xl text-cream">follow the loop ✿</h2>
-        <p className="mt-2 text-cream/70">
+        <h2 className="font-display text-2xl text-rose-light">follow the loop ✿</h2>
+        <p className="mt-2 text-rose-light/85">
           see our latest drops & behind-the-scenes on instagram
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">

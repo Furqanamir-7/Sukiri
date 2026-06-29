@@ -63,7 +63,7 @@ export default function ProductCarousel({ images, alt }) {
             <button
               type="button"
               onClick={() => paginate(-1)}
-              className="absolute left-1 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-navy-deep/70 text-cream backdrop-blur-sm transition hover:bg-navy-deep"
+              className="absolute left-1 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-navy-deep/70 text-rose-light backdrop-blur-sm transition hover:bg-navy-deep"
               aria-label="Previous photo"
             >
               ‹
@@ -71,7 +71,7 @@ export default function ProductCarousel({ images, alt }) {
             <button
               type="button"
               onClick={() => paginate(1)}
-              className="absolute right-1 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-navy-deep/70 text-cream backdrop-blur-sm transition hover:bg-navy-deep"
+              className="absolute right-1 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-navy-deep/70 text-rose-light backdrop-blur-sm transition hover:bg-navy-deep"
               aria-label="Next photo"
             >
               ›
@@ -90,12 +90,12 @@ export default function ProductCarousel({ images, alt }) {
                 onClick={() => goTo(i)}
                 aria-label={`Go to photo ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === index ? 'w-4 bg-cream' : 'w-1.5 bg-cream/40 hover:bg-cream/60'
+                  i === index ? 'w-4 bg-rose-light' : 'w-1.5 bg-rose-light/45 hover:bg-rose-light/65'
                 }`}
               />
             ))}
           </div>
-          <p className="mt-1 text-center text-[10px] tracking-wide text-cream/45">
+          <p className="mt-1 text-center text-[10px] tracking-wide text-rose-light/55">
             swipe to see more ✿ {index + 1}/{images.length}
           </p>
         </>

@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-white/20 bg-navy-deep/90 backdrop-blur-md">
+      <nav className="sticky top-0 z-50 border-b border-rose-light/25 bg-navy-deep/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
           <Link to="/" onClick={() => setOpen(false)}>
             <Logo size="md" />
@@ -31,8 +31,8 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition hover:text-white ${
-                    isActive ? 'text-white underline decoration-steel underline-offset-4' : 'text-cream/80'
+                  `text-sm font-medium transition hover:text-rose-light ${
+                    isActive ? 'text-rose-light underline decoration-steel underline-offset-4' : 'text-rose-light/85'
                   }`
                 }
               >
@@ -53,13 +53,13 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block h-0.5 w-6 bg-cream transition ${open ? 'translate-y-2 rotate-45' : ''}`}
+              className={`block h-0.5 w-6 bg-rose-light transition ${open ? 'translate-y-2 rotate-45' : ''}`}
             />
             <span
-              className={`block h-0.5 w-6 bg-cream transition ${open ? 'opacity-0' : ''}`}
+              className={`block h-0.5 w-6 bg-rose-light transition ${open ? 'opacity-0' : ''}`}
             />
             <span
-              className={`block h-0.5 w-6 bg-cream transition ${open ? '-translate-y-2 -rotate-45' : ''}`}
+              className={`block h-0.5 w-6 bg-rose-light transition ${open ? '-translate-y-2 -rotate-45' : ''}`}
             />
           </button>
         </div>
@@ -76,7 +76,7 @@ export default function Navbar() {
               <div className="mb-8 flex justify-end">
                 <button
                   onClick={() => setOpen(false)}
-                  className="text-cream/70 hover:text-cream"
+                  className="text-rose-light/80 hover:text-rose-light"
                   aria-label="Close menu"
                 >
                   ✕
@@ -90,8 +90,8 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={`text-lg font-medium ${
                       location.pathname === link.to
-                        ? 'text-white'
-                        : 'text-cream/80'
+                        ? 'text-rose-light'
+                        : 'text-rose-light/85'
                     }`}
                   >
                     {link.label}

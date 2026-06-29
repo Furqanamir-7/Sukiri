@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import WhatsAppFAB from './components/WhatsAppFAB'
+import FloatingWhatsAppButton from './components/FloatingWhatsAppButton'
 import PageTransition from './components/PageTransition'
 import { WhatsAppProvider } from './components/WhatsAppPopup'
 import Home from './pages/Home'
@@ -71,7 +71,7 @@ export default function App() {
           <AnimatedRoutes />
         </main>
         <Footer />
-        <WhatsAppFAB />
+        <FloatingWhatsAppButton />
       </div>
     </WhatsAppProvider>
   )

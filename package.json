@@ -6,7 +6,7 @@
   "scripts": {
     "sync-products": "node scripts/sync-products.mjs",
     "dev": "vite",
-    "build": "npm run sync-products && vite build",
+    "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },

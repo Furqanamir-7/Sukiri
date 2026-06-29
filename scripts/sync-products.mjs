@@ -71,8 +71,8 @@ function formatPrice(n) {
 }
 
 if (!fs.existsSync(SOURCE)) {
-  console.error(`Source folder not found: ${SOURCE}`)
-  process.exit(1)
+  console.warn(`Source folder not found (${SOURCE}) — skipping product sync.`)
+  process.exit(0)
 }
 
 fs.mkdirSync(DEST, { recursive: true })

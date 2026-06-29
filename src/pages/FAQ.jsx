@@ -32,11 +32,11 @@ function AccordionItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="flex w-full items-center gap-3 px-5 py-4 text-left"
       >
-        <span className="text-steel">✿</span>
-        <span className="flex-1 font-semibold text-navy-deep">{item.q}</span>
+        <span className="text-magenta/70">✿</span>
+        <span className="flex-1 font-semibold text-ink">{item.q}</span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
-          className="text-xl text-navy/50"
+          className="text-xl text-magenta/50"
         >
           +
         </motion.span>
@@ -50,7 +50,7 @@ function AccordionItem({ item, isOpen, onToggle }) {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="px-5 pb-4 pl-10 text-sm leading-relaxed text-navy/70">
+            <p className="px-5 pb-4 pl-10 text-sm leading-relaxed text-ink/75">
               {item.a}
             </p>
           </motion.div>
@@ -70,10 +70,10 @@ export default function FAQ() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-10 text-center"
       >
-        <h1 className="font-display text-4xl text-cream md:text-5xl">
+        <h1 className="font-display text-4xl text-ink md:text-5xl">
           got questions? ✿
         </h1>
-        <p className="mt-2 text-cream/70">we've got answers</p>
+        <p className="mt-2 text-ink/75">we've got answers</p>
       </motion.div>
 
       <div className="space-y-3">

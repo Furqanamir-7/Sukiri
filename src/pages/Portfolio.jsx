@@ -20,10 +20,10 @@ export default function Portfolio() {
         animate={{ opacity: 1, y: 0 }}
         className="mb-10 text-center"
       >
-        <h1 className="font-display text-4xl text-cream md:text-5xl">
+        <h1 className="font-display text-4xl text-ink md:text-5xl">
           the lookbook ✿
         </h1>
-        <p className="mt-2 text-cream/70">
+        <p className="mt-2 text-ink/75">
           past drops & handmade pieces — each one unique
         </p>
       </motion.div>
@@ -35,8 +35,8 @@ export default function Portfolio() {
             onClick={() => setFilter(cat)}
             className={`rounded-full px-4 py-2 text-sm font-medium transition ${
               filter === cat
-                ? 'bg-cream text-navy-deep'
-                : 'bg-navy-deep text-cream/80 hover:bg-navy-deep/80'
+                ? 'bg-cream text-ink'
+                : 'bg-navy-deep text-cream/90 hover:bg-navy-deep/80'
             }`}
           >
             {cat}
@@ -62,8 +62,8 @@ export default function Portfolio() {
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-cream">{item.name}</h3>
-                <p className="mt-1 text-sm text-steel">{item.price}</p>
-                <span className="mt-2 inline-block rounded-full bg-navy px-3 py-0.5 text-xs text-steel">
+                <p className="mt-1 text-sm text-cream/90">{item.price}</p>
+                <span className="mt-2 inline-block rounded-full bg-navy-deep/80 px-3 py-0.5 text-xs text-cream/90">
                   {item.category}
                 </span>
               </div>

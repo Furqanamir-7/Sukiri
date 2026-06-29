@@ -8,7 +8,7 @@ export default function ScallopedCard({
 }) {
   const variants = {
     navy: 'bg-navy-deep border-navy-deep/50',
-    cream: 'bg-cream text-navy-deep border-cream/50',
+    cream: 'bg-cream text-ink border-cream/50',
     light: 'bg-navy border-steel/30',
   }
 

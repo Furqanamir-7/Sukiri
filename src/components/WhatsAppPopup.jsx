@@ -43,7 +43,7 @@ export function WhatsAppProvider({ children }) {
               exit={{ opacity: 0 }}
             />
             <motion.div
-              className="relative w-full max-w-md rounded-3xl bg-cream p-8 text-navy-deep shadow-2xl"
+              className="relative w-full max-w-md rounded-3xl bg-cream p-8 text-ink shadow-2xl"
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -51,7 +51,7 @@ export function WhatsAppProvider({ children }) {
             >
               <button
                 onClick={closePopup}
-                className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-navy/10 text-navy-deep transition hover:bg-navy/20"
+                className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-magenta/10 text-ink transition hover:bg-magenta/20"
                 aria-label="Close"
               >
                 ✕
@@ -65,15 +65,15 @@ export function WhatsAppProvider({ children }) {
                 </div>
               </div>
 
-              <h3 className="mb-2 text-center font-display text-2xl text-navy">
+              <h3 className="mb-2 text-center font-display text-2xl text-magenta">
                 order on whatsapp ✿
               </h3>
-              <p className="mb-1 text-center text-sm text-navy/70">
+              <p className="mb-1 text-center text-sm text-ink/75">
                 {popup.itemName
                   ? `you're ordering: ${popup.itemName}`
                   : 'ready to place your order?'}
               </p>
-              <p className="mb-6 rounded-2xl bg-navy/5 p-4 text-center text-sm italic text-navy/80">
+              <p className="mb-6 rounded-2xl bg-magenta/5 p-4 text-center text-sm italic text-ink/80">
                 "{popup.message}"
               </p>
 
@@ -89,13 +89,13 @@ export function WhatsAppProvider({ children }) {
                 </button>
                 <button
                   onClick={closePopup}
-                  className="w-full rounded-full border-2 border-navy/20 px-6 py-3 text-sm text-navy/70 transition hover:border-navy/40"
+                  className="w-full rounded-full border-2 border-magenta/20 px-6 py-3 text-sm text-ink/75 transition hover:border-magenta/40"
                 >
                   maybe later
                 </button>
               </div>
 
-              <p className="mt-4 text-center text-xs text-navy/50">
+              <p className="mt-4 text-center text-xs text-ink/55">
                 +92 315 3507300
               </p>
             </motion.div>

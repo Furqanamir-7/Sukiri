@@ -76,7 +76,7 @@ export default function Home() {
           >
             <Link
               to="/shop"
-              className="rounded-full bg-cream px-8 py-3 font-semibold text-navy-deep transition hover:scale-105 hover:bg-white"
+              className="rounded-full bg-cream px-8 py-3 font-semibold text-ink transition hover:scale-105 hover:bg-blush-deep"
             >
               Browse the Shop
             </Link>
@@ -94,7 +94,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-10 text-center font-display text-3xl text-cream md:text-4xl"
+          className="mb-10 text-center font-display text-3xl text-ink md:text-4xl"
         >
           best sellers ✿
         </motion.h2>
@@ -113,11 +113,11 @@ export default function Home() {
                   <ProductMedia item={item} />
                 </div>
                 <h3 className="font-semibold text-cream">{item.name}</h3>
-                <p className="mt-1 text-sm text-steel">{item.price}</p>
-                <p className="mt-2 text-xs text-cream/60">✿ {item.description}</p>
+                <p className="mt-1 text-sm text-cream/90">{item.price}</p>
+                <p className="mt-2 text-xs text-cream/75">✿ {item.description}</p>
                 <Link
                   to="/shop"
-                  className="mt-4 inline-block text-sm text-steel hover:text-cream"
+                  className="mt-4 inline-block text-sm text-cream/90 hover:text-cream"
                 >
                   view in shop →
                 </Link>

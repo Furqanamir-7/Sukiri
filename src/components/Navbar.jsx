@@ -41,7 +41,7 @@ export default function Navbar() {
             ))}
             <button
               onClick={() => openWhatsApp()}
-              className="rounded-full bg-cream px-4 py-2 text-sm font-semibold text-navy-deep transition hover:scale-105 hover:bg-white"
+              className="rounded-full bg-cream px-4 py-2 text-sm font-semibold text-ink transition hover:scale-105 hover:bg-blush-deep"
             >
               Order Now
             </button>
@@ -102,7 +102,7 @@ export default function Navbar() {
                     setOpen(false)
                     openWhatsApp()
                   }}
-                  className="mt-4 rounded-full bg-cream px-5 py-3 text-center font-semibold text-navy-deep"
+                  className="mt-4 rounded-full bg-cream px-5 py-3 text-center font-semibold text-ink"
                 >
                   Order Now
                 </button>

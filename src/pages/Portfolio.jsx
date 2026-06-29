@@ -54,13 +54,13 @@ export default function Portfolio() {
             className="mb-4 break-inside-avoid"
           >
             <ScallopedCard className="group cursor-pointer p-0">
-              <div className="relative overflow-hidden rounded-t-xl">
+              <div className="relative flex items-center justify-center rounded-t-xl bg-navy-deep/40 p-3">
                 <ProductImage
                   src={item.image}
                   alt={item.name}
-                  className="aspect-[4/5] transition duration-300 group-hover:scale-105"
+                  className="transition duration-300 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-navy-deep/60 opacity-0 transition group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-center justify-center rounded-t-xl bg-navy-deep/60 opacity-0 transition group-hover:opacity-100">
                   <span className="font-accent text-2xl text-cream">✿ view</span>
                 </div>
               </div>

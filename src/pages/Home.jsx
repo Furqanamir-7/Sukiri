@@ -109,7 +109,7 @@ export default function Home() {
               transition={{ delay: i * 0.1 }}
             >
               <ScallopedCard>
-                <div className="mb-4 h-48 overflow-hidden rounded-xl bg-navy">
+                <div className="mb-4 flex min-h-[220px] items-center justify-center rounded-xl bg-navy-deep/40 p-3">
                   <ProductImage src={item.image} alt={item.name} />
                 </div>
                 <h3 className="font-semibold text-cream">{item.name}</h3>

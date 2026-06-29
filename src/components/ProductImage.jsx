@@ -6,7 +6,7 @@ export default function ProductImage({ src, alt, className = '' }) {
       src={src}
       alt={alt}
       loading="lazy"
-      className={`h-full w-full object-cover ${className}`}
+      className={`mx-auto h-auto max-h-72 w-full object-contain ${className}`}
     />
   )
 }

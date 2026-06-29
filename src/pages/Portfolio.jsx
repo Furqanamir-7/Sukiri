@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ScallopedCard from '../components/ScallopedCard'
 import WhatsAppButton from '../components/WhatsAppButton'
-import DaisySVG from '../components/DaisySVG'
+import ProductImage from '../components/ProductImage'
 import { portfolioItems, portfolioCategories } from '../data/portfolioItems'
 
 export default function Portfolio() {
@@ -54,17 +54,11 @@ export default function Portfolio() {
             className="mb-4 break-inside-avoid"
           >
             <ScallopedCard className="group cursor-pointer p-0">
-              <div
-                className="relative flex items-center justify-center overflow-hidden rounded-t-xl"
-                style={{
-                  height: i % 3 === 0 ? 280 : i % 3 === 1 ? 220 : 260,
-                  backgroundColor: '#2B3F5C',
-                }}
-              >
-                <DaisySVG
-                  size={80}
-                  color={item.accent === '#F5F0E8' ? 'light' : 'dark'}
-                  animationDelay={i * 0.2}
+              <div className="relative overflow-hidden rounded-t-xl">
+                <ProductImage
+                  src={item.image}
+                  alt={item.name}
+                  className="aspect-[4/5] transition duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-navy-deep/60 opacity-0 transition group-hover:opacity-100">
                   <span className="font-accent text-2xl text-cream">✿ view</span>
@@ -72,7 +66,8 @@ export default function Portfolio() {
               </div>
               <div className="p-4">
                 <h3 className="font-semibold text-cream">{item.name}</h3>
-                <span className="mt-1 inline-block rounded-full bg-navy px-3 py-0.5 text-xs text-steel">
+                <p className="mt-1 text-sm text-steel">{item.price}</p>
+                <span className="mt-2 inline-block rounded-full bg-navy px-3 py-0.5 text-xs text-steel">
                   {item.category}
                 </span>
               </div>

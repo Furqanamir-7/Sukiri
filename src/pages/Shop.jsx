@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ScallopedCard from '../components/ScallopedCard'
 import WhatsAppButton from '../components/WhatsAppButton'
-import DaisySVG from '../components/DaisySVG'
+import ProductImage from '../components/ProductImage'
 import { shopItems, categories } from '../data/shopItems'
 
 export default function Shop() {
@@ -56,8 +56,8 @@ export default function Shop() {
             transition={{ delay: i * 0.08 }}
           >
             <ScallopedCard>
-              <div className="mb-4 flex h-44 items-center justify-center rounded-xl bg-navy">
-                <DaisySVG size={56} color="light" animationDelay={i * 0.2} />
+              <div className="mb-4 h-52 overflow-hidden rounded-xl bg-navy">
+                <ProductImage src={item.image} alt={item.name} />
               </div>
               <h3 className="text-lg font-semibold text-cream">{item.name}</h3>
               <p className="mt-1 font-medium text-steel">{item.price}</p>
@@ -95,7 +95,7 @@ export default function Shop() {
             <div className="mt-6">
               <WhatsAppButton
                 itemName="Custom Order"
-                variant="green"
+                variant="cream"
                 className="px-8 py-3"
               >
                 Start a Custom Order ✿

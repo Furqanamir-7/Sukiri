@@ -4,7 +4,7 @@ import FlowerField from '../components/FlowerField'
 import Marquee from '../components/Marquee'
 import ScallopedCard from '../components/ScallopedCard'
 import WhatsAppButton from '../components/WhatsAppButton'
-import DaisySVG from '../components/DaisySVG'
+import ProductImage from '../components/ProductImage'
 import { shopItems } from '../data/shopItems'
 
 const featured = shopItems.filter((item) => item.category !== 'Custom').slice(0, 3)
@@ -109,8 +109,8 @@ export default function Home() {
               transition={{ delay: i * 0.1 }}
             >
               <ScallopedCard>
-                <div className="mb-4 flex h-40 items-center justify-center rounded-xl bg-navy">
-                  <DaisySVG size={64} color="light" animationDelay={i * 0.3} />
+                <div className="mb-4 h-48 overflow-hidden rounded-xl bg-navy">
+                  <ProductImage src={item.image} alt={item.name} />
                 </div>
                 <h3 className="font-semibold text-cream">{item.name}</h3>
                 <p className="mt-1 text-sm text-steel">{item.price}</p>

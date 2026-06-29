@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&amp;family=Pacifico&amp;display=swap');
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="#3D5A80"/>
+  <rect width="1200" height="630" fill="url(#glow)" opacity="0.35"/>
+
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#7B9EC4"/>
+      <stop offset="100%" stop-color="#3D5A80" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- scattered daisies -->
+  <g opacity="0.22">
+    <g transform="translate(120 90) scale(1.1)"><use href="#daisy-light"/></g>
+    <g transform="translate(980 80) scale(0.9)"><use href="#daisy-light"/></g>
+    <g transform="translate(180 500) scale(0.75)"><use href="#daisy-light"/></g>
+    <g transform="translate(1020 480) scale(1)"><use href="#daisy-light"/></g>
+    <g transform="translate(90 300) scale(0.6)"><use href="#daisy-dark"/></g>
+    <g transform="translate(1100 300) scale(0.65)"><use href="#daisy-dark"/></g>
+  </g>
+
+  <defs>
+    <g id="daisy-light">
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#F5F0E8" transform="rotate(0 24 24)"/>
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#F5F0E8" transform="rotate(72 24 24)"/>
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#F5F0E8" transform="rotate(144 24 24)"/>
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#F5F0E8" transform="rotate(216 24 24)"/>
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#F5F0E8" transform="rotate(288 24 24)"/>
+      <path d="M24 21.5c-1.4 0-2.5 1.1-2.5 2.5 0 1.8 2.5 4.5 2.5 4.5s2.5-2.7 2.5-4.5c0-1.4-1.1-2.5-2.5-2.5z" fill="#7B9EC4"/>
+    </g>
+    <g id="daisy-dark">
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#2B3F5C" transform="rotate(0 24 24)"/>
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#2B3F5C" transform="rotate(72 24 24)"/>
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#2B3F5C" transform="rotate(144 24 24)"/>
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#2B3F5C" transform="rotate(216 24 24)"/>
+      <ellipse cx="24" cy="11" rx="6.5" ry="9.5" fill="#2B3F5C" transform="rotate(288 24 24)"/>
+      <path d="M24 21.5c-1.4 0-2.5 1.1-2.5 2.5 0 1.8 2.5 4.5 2.5 4.5s2.5-2.7 2.5-4.5c0-1.4-1.1-2.5-2.5-2.5z" fill="#F5F0E8"/>
+    </g>
+  </defs>
+
+  <!-- main logo mark -->
+  <g transform="translate(430 145) scale(3.2)">
+    <circle cx="48" cy="48" r="44" fill="#2B3F5C" opacity="0.18"/>
+    <ellipse cx="48" cy="22" rx="13" ry="19" fill="#F5F0E8" transform="rotate(0 48 48)"/>
+    <ellipse cx="48" cy="22" rx="13" ry="19" fill="#F5F0E8" transform="rotate(72 48 48)"/>
+    <ellipse cx="48" cy="22" rx="13" ry="19" fill="#F5F0E8" transform="rotate(144 48 48)"/>
+    <ellipse cx="48" cy="22" rx="13" ry="19" fill="#F5F0E8" transform="rotate(216 48 48)"/>
+    <ellipse cx="48" cy="22" rx="13" ry="19" fill="#F5F0E8" transform="rotate(288 48 48)"/>
+    <path d="M48 43c-2.8 0-5 2.2-5 5 0 3.6 5 9 5 9s5-5.4 5-9c0-2.8-2.2-5-5-5z" fill="#7B9EC4"/>
+    <circle cx="48" cy="48" r="6" fill="#3D5A80"/>
+  </g>
+
+  <text x="600" y="390" text-anchor="middle" fill="#F5F0E8" font-family="Pacifico, cursive" font-size="92">sukiri</text>
+  <text x="600" y="455" text-anchor="middle" fill="#F5F0E8" opacity="0.9" font-family="'Dancing Script', cursive" font-size="42">your lucky loop</text>
+  <text x="600" y="520" text-anchor="middle" fill="#7B9EC4" font-family="Arial, sans-serif" font-size="22" letter-spacing="6">HANDMADE CROCHET ?</text>
+</svg>
